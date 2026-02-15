@@ -1,102 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>saylani</title>
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="main-container">
+    <div class="main-container">
 
-    <!-- TOP SECTION -->
-    <div class="top-section">
+        <!-- TOP SECTION -->
+        <div class="top-section">
 
-        <!-- Left Info -->
-        <div class="portal-info">
-            <h1><img src="image/saylani logo.png" alt=""></h1>
-            <h2>Campus Portal</h2>
-            <p>Manage reports, complaints<br>& events in one place.</p>
-        </div>
-
-        <!-- Login Card -->
-        <div class="login-card">
-            <h3>Login</h3>
-
-            <label>Email</label>
-            <input type="email">
-
-            <label>Password</label>
-            <input type="password">
-
-            <div class="role-btns">
-                <button>Student</button>
-                <button>Admin</button>
+            <!-- Left Info -->
+            <div class="portal-info">
+                <h1><img src="image/saylani logo.png" alt=""></h1>
+                <h2>Campus Portal</h2>
+                <p>Manage reports, complaints<br>& events in one place.</p>
             </div>
 
-            <button class="login-btn">Log In</button>
+            <!-- Login Card -->
+            <div class="login-card">
+                <h3>Login</h3>
 
-            <div class="google-btn">
-                <img src="google.png" alt="">
-                Sign in an account
+                <label>Email</label>
+                <input type="email">
+
+                <label>Password</label>
+                <input type="password">
+
+                <div class="role-btns">
+                    <button>Student</button>
+                    <button>Admin</button>
+                </div>
+
+                <button class="login-btn">Log In</button>
+
+                <div class="google-btn">
+                    <img src="google.png" alt="">
+                    Sign in an account
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- EVENTS SECTION -->
+        <div class="events-container">
+
+            <div class="events-header">
+                <span>🗂</span>
+                <h3>Submit Complaint</h3>
+            </div>
+
+            <!-- Banner -->
+            <div class="banner-card">
+                <img src="image/clean img.webp" alt="">
+
+                <div class="banner-content">
+                    <h2>Community Cleanup</h2>
+                    <p>Saturday, 22th June</p>
+                    <button>City Park</button>
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="cards">
+
+                <div class="card">
+                    <img src="image/truck-1.jfif">
+                    <div class="card-body">
+                        <h4>Tech Workshop</h4>
+                        <p>June 5</p>
+                        <button>Register</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="image/images.jfif">
+                    <div class="card-body">
+                        <h4>Health Camp</h4>
+                        <p>July 5</p>
+                        <button>Register</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ------card 4) Complaint System------- -->
+    <div class="container py-4">
+
+        <!-- ================= SUBMIT COMPLAINT ================= -->
+        <div class="card custom-card mb-4">
+            <div class="card-body">
+
+                <div class="section-title mb-4">
+                    <span class="material-icons-outlined">assignment</span>
+                    Submit Complaint
+                </div>
+
+                <form id="complaintForm">
+
+                    <div class="mb-3">
+                        <label class="form-label">Complaint Title</label>
+                        <input type="text" class="form-control" id="title" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Category</label>
+                        <select class="form-select" id="category">
+                            <option>Backpacks</option>
+                            <option>Electronics</option>
+                            <option>Documents</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Description</label>
+                        <textarea class="form-control" id="description" rows="3"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Location</label>
+                        <select class="form-select" id="location">
+                            <option>Dr Neast</option>
+                            <option>City Park</option>
+                            <option>Main Hall</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label me-3">Urgency</label>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="urgency" value="Low" required>
+                            <label class="form-check-label text-success">Low</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="urgency" value="Medium">
+                            <label class="form-check-label text-warning">Medium</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="urgency" value="High">
+                            <label class="form-check-label text-danger">High</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-custom">
+                        Submit Complaint
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+
+
+        <!-- ================= MY COMPLAINTS ================= -->
+        <div class="card custom-card">
+            <div class="card-body">
+
+                <div class="section-title mb-2">
+                    My Complaints
+                </div>
+
+                <p class="text-muted small mb-3">
+                    Status: All | Category: All
+                </p>
+
+                <div class="table-responsive">
+                    <table class="table align-middle" id="complaintTable">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ID</th>
+                                <th>Complaint</th>
+                                <th>Location</th>
+                                <th>Urgency</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>503</td>
+                                <td>Wi-Fi Not Working</td>
+                                <td>Dr Neast</td>
+                                <td>High</td>
+                                <td><span class="badge badge-pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>504</td>
+                                <td>Leaky Pipe</td>
+                                <td>City Park</td>
+                                <td>Low</td>
+                                <td><span class="badge badge-resolved">Resolved</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
 
     </div>
 
 
-    <!-- EVENTS SECTION -->
-    <div class="events-container">
+    <!--------------------------------card 6--------------------------->
+    <div class="container py-4">
 
-        <div class="events-header">
-            <span>🗂</span>
-            <h3>Submit Complaint</h3>
-        </div>
+        <!-- HEADER -->
+        <div class="topbar">
+            <div class="title">
+                <span class="material-icons-outlined">dashboard</span>
+                Admin Dashboard
+            </div>
 
-        <!-- Banner -->
-        <div class="banner-card">
-            <img src="image/clean img.webp" alt="">
-
-            <div class="banner-content">
-                <h2>Community Cleanup</h2>
-                <p>Saturday, 22th June</p>
-                <button>City Park</button>
+            <div class="notify-btn" id="notifyBtn">
+                <span class="material-icons-outlined">notifications</span>
             </div>
         </div>
 
-        <!-- Cards -->
-        <div class="cards">
+        <!-- CARDS -->
+        <div class="row g-3">
 
-            <div class="card">
-                <img src="image/truck-1.jfif">
-                <div class="card-body">
-                    <h4>Tech Workshop</h4>
-                    <p>June 5</p>
-                    <button>Register</button>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card-box">
+                    <div class="icon-box green"><span class="material-icons-outlined">group</span></div>
+                    <div><span>Total Users</span>
+                        <h3>540</h3>
+                    </div>
                 </div>
             </div>
 
-            <div class="card">
-                <img src="image/images.jfif">
-                <div class="card-body">
-                    <h4>Health Camp</h4>
-                    <p>July 5</p>
-                    <button>Register</button>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card-box">
+                    <div class="icon-box red"><span class="material-icons-outlined">priority_high</span></div>
+                    <div><span>Open Complaints</span>
+                        <h3>12</h3>
+                    </div>
                 </div>
             </div>
 
+            <div class="col-sm-6 col-lg-3">
+                <div class="card-box">
+                    <div class="icon-box teal"><span class="material-icons-outlined">inventory</span></div>
+                    <div><span>Lost Items Pending</span>
+                        <h3>6</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+                <div class="card-box">
+                    <div class="icon-box green"><span class="material-icons-outlined">groups</span></div>
+                    <div><span>Active Volunteers</span>
+                        <h3>24</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TABLE -->
+        <div class="table-wrap">
+            <div class="fw-semibold mb-3">Complaints Management</div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Item</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>506</td>
+                            <td>Disc Mixer</td>
+                            <td>Complaints</td>
+                            <td><span class="status s-green">In progress</span></td>
+                        </tr>
+                        <tr>
+                            <td>502</td>
+                            <td>Mug Miphen</td>
+                            <td>Donation</td>
+                            <td><span class="status s-yellow">Due Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>505</td>
+                            <td>Water Fondly</td>
+                            <td>Permit</td>
+                            <td><span class="status s-blue">Escalated</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </div>
 
-</div>
+    <!-- OVERLAY -->
+    <div class="overlay" id="overlay"></div>
 
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebar">
+        <div class="side-header">
+            Notifications
+            <span class="material-icons-outlined" id="closeBtn" style="cursor:pointer">close</span>
+        </div>
+
+        <div class="notify-item">
+            <div class="nicon orange">!</div>
+            <div>
+                <h6>Complaint Marked as Resolved</h6><small>44m</small>
+            </div>
+        </div>
+
+        <div class="notify-item">
+            <div class="nicon blue">✓</div>
+            <div>
+                <h6>Laptop Found: Matches with Your Report!</h6><small>42m</small>
+            </div>
+        </div>
+
+        <div class="notify-item">
+            <div class="nicon green2">★</div>
+            <div>
+                <h6>Reminder: Event Tomorrow</h6><small>40m</small>
+            </div>
+        </div>
+
+        <div class="notify-item">
+            <div class="nicon sky">k</div>
+            <div>
+                <h6>Staff Reset!</h6><small>30m</small>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- custom js file link -->
+    <script src="./script.js"> </script>
 </body>
+
 </html>
